@@ -1,0 +1,12 @@
+body{
+  background: url(https://images.unsplash.com/photo-1537861295351-76bb831ece99?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=450947424e5f27a436d647eb001c4ed5&auto=format&fit=crop&w=1502&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h2{
+  color:yellow;
+
+}
+h3{
+  color: brown;
+}

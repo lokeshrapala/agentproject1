@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'form3.css'%}">
+  </head>
+  <body>
+    <form action="/locationinsert">
+<h2>
+      <p>Enter location details </p></h2>
+<h3>
+      <ol>
+
+
+      <li>Enter location_id<input type="text" name="locationid" ></li>
+      <li>Enter agentid <input type="text" name="agentloc"></li>
+      <li>Enter location name <input type="text" name="locname" ></li>
+      <li>Enter location city <input type="text" name="loccity" ></li>
+      <li>Enter location state <input type="text" name="locstate" ></li>
+      <li>Enter pincode <input type="IntegerField" name="pincode" ></li>
+      <input type="submit" value="save">
+        </ol>
+        </h3>
+    </form>
+
+  </body>
+</html>

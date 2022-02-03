@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'form4.css'%}">
+  </head>
+  <body>
+    <form action="/addressinsert">
+      <h2>
+      <p>Enter location details </p></h2>
+      <h3>
+      <ol>
+
+
+      <li>Enter Address id<input type="text" name="addressid" ></li>
+      <li>Enter agent id<input type="text" name="agentid"></li>
+      <li>Enter Address line1 <input type="text" name="addressline1" ></li>
+      <li>Enter address line2 <input type="text" name="addressline2" ></li>
+      <li>Enter City <input type="text" name="city" ></li>
+      <li>Enter State <input type="text" name="state" ></li>
+      <li>Enter Pincode <input type="IntegerField" name="pincode" ></li>
+      <li>Enter Landmark <input type="text" name="landmark" ></li>
+      <input type="submit" value="save">
+        </ol>
+        </h3>
+    </form>
+
+  </body>
+</html>

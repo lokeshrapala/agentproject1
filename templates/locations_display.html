@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'testapp2.css'%}">
+  </head>
+  <body>
+    <h1>LOCATION DETAILS</h1>
+    {% if agentrecord2 %}
+    <table border="3",<canvas id="canvas" width="300" height="300"></canvas>>
+      <thead>
+        <th>LOCATION_ID</th>
+        <th>AGENT</th>
+        <th>LOC_NAME</th>
+        <th>LOC_CITY</th>
+        <th>LOC_STATE</th>
+        <th>PINCODE</th>
+      </thead>
+      {% for agentsloc in agentrecord2 %}
+      <tr>
+        <td>{{agentsloc.locationid}}</td>
+        <td>{{agentsloc.agentloc}}</td>
+        <td>{{agentsloc.locname}}</td>
+        <td>{{agentsloc.loccity}}</td>
+        <td>{{agentsloc.locstate}}</td>
+        <td>{{agentsloc.pincode}}</td>
+      </tr>
+      {% endfor%}
+    </table>
+    {%else%}
+<p>NO LOCATION RECORD WILL BE FOUND </p>
+  {% endif %}
+
+  </body>
+</html>

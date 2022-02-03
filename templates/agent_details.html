@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>AGENT DETAILS</h1>
+    {% if records %}
+    <table border="3",<canvas id="canvas" width="300" height="300"></canvas>>
+      <thead>
+        <th>AGENT_ID</th>
+        <th>FIRST_NAME</th>
+        <th>LAST_NAME</th>
+        <th>EXPERIENCE</th>
+        <th>COMPANY_NAME</th>
+      </thead>
+        {% for record in records %}
+            <tr>
+        <td>{{record.agentid}}</td>
+        <td>{{record.firstname}}</td>
+        <td>{{record.lastname}}</td>
+        <td>{{record.experience}}</td>
+        <td>{{record.company}}</td>
+      </tr>
+      {% endfor%}
+    </table>
+    {%else%}
+<p>NO AGENT AGENT FOUND WITH THAT ID </p>
+  {% endif %}
+
+  </body>
+</html>

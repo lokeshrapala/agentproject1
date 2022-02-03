@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'testapp.css'%}">
+  </head>
+  <body>
+    <h1>AGENT DETAILS</h1>
+    {% if agentrecord %}
+    <table border="3",<canvas id="canvas" width="300" height="300"></canvas>>
+      <thead>
+        <th>AGENT_ID</th>
+        <th>FIRST_NAME</th>
+        <th>LAST_NAME</th>
+        <th>EXPERIENCE</th>
+        <th>COMPANY_NAME</th>
+      </thead>
+      {% for agents in agentrecord%}
+      <tr>
+        <td>{{agents.agentid}}</td>
+        <td>{{agents.firstname}}</td>
+        <td>{{agents.lastname}}</td>
+        <td>{{agents.experience}}</td>
+        <td>{{agents.company}}</td>
+      </tr>
+      {% endfor%}
+    </table>
+    {%else%}
+<p>NO AGENT RECORD WILL BE FOUND </p>
+  {% endif %}
+
+  </body>
+</html>

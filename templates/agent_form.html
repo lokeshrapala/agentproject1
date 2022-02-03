@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'form1.css'%}">
+  </head>
+  <body >
+    <form action="/agentinsert">
+      <h2><b>Enter Agent details</b> </h2>
+
+    <h3> <ol>
+
+
+      <li>Enter agent_id   <input type="text" name="agentid" ></li>
+      <li>Enter first name <input type="text" name="firstname"></li>
+      <li>Enter last name  <input type="text" name="lastname" ></li>
+      <li>Enter experience <input type="text" name="experience" ></li>
+      <li>Enter company name <input type="text" name="company" ></li>
+      <input type="submit" value="save">
+        </ol>
+      </h3>
+    </form>
+
+  </body>
+</html>

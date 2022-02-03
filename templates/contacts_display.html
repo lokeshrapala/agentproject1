@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'teatapp1.css'%}">
+  </head>
+  <body>
+    <div class="container">
+
+    <h1>CONTACTS INFORMATION</h1>
+    {% if agentrecord1 %}
+    <table border="3",<canvas id="canvas" width="300" height="300"></canvas>>
+      <thead>
+        <th>CONTACT_ID</th>
+        <th>AGENT_ID</th>
+        <th>MOBILENO</th>
+        <th>EMAIL</th>
+      </thead>
+      {% for agentcon in agentrecord1%}
+      <tr>
+        <td>{{agentcon.contactid}}</td>
+        <td>{{agentcon.agentid}}</td>
+        <td>{{agentcon.mobileno}}</td>
+        <td>{{agentcon.email}}</td>
+      </tr>
+      {% endfor%}
+    </table>
+    {%else%}
+<p>NO AGENT RECORD WILL BE FOUND </p>
+  {% endif %}
+
+  </body>
+</html>

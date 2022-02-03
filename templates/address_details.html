@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%load static%}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'testapp3.css'%}">
+  </head>
+  <body>
+    <h1>ADDRESS DETAILS</h1>
+    {% if records4 %}
+    <table border="3">
+      <thead>
+        <th>ADDRESS_ID</th>
+        <th>AGENT_ID</th>
+        <th>ADDRESSLINE-1</th>
+        <th>ADDRESSLINE-2</th>
+        <th>CITY</th>
+        <th>STATE</th>
+        <th>PINCODE</th>
+        <th>LANDMARK</th>
+      </thead>
+      {% for agentsadr in records4 %}
+      <tr>
+        <td>{{agentsadr.addressid}}</td>
+        <td>{{agentsadr.agentid}}</td>
+        <td>{{agentsadr.addressline1}}</td>
+        <td>{{agentsadr.addressline2}}</td>
+        <td>{{agentsadr.city}}</td>
+        <td>{{agentsadr.state}}</td>
+        <td>{{agentsadr.pincode}}</td>
+        <td>{{agentsadr.landmark}}</td>
+      </tr>
+      {% endfor%}
+    </table>
+    {%else%}
+<p>NO ADDRESS RECORD WILL BE FOUND </p>
+  {% endif %}
+
+  </body>
+</html>
